@@ -1,13 +1,20 @@
 {
   "compilerOptions": {
     "emitDeclarationOnly": true,
-    "baseUrl": ".",
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "declaration": true,
-    "declarationDir": "types"
+    "declarationDir": "types",
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "$src/*": ["./src/*"]
+    },
+    "types": [
+      "node"
+    ]
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "test"]
 }
