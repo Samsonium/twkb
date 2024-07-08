@@ -32,11 +32,13 @@ export default class ByteStream {
      * Read the next byte from the byte stream.
      * @returns The next byte from the stream.
      */
-    public read(): number {
-        if (this.index >= this.bytes.length)
+    public read(size: number = 1): number[] {
+        if (this.index + size - 1 >= this.bytes.length)
             throw `End of bytearray reached (length: ${this.bytes.length}, index: ${this.index})`;
 
-        return this.bytes[this.index++];
+        const bytes = this.bytes.slice(this.index, this.index + size);
+        this.index += size;
+        return bytes;
     }
 
     /**

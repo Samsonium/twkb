@@ -22,9 +22,9 @@ describe('ByteStream class', () => {
     });
     it('should return the correct byte in sequence', () => {
         const byteStream = new ByteStream([0x01, 0x02, 0x03]);
-        expect(byteStream.read()).toBe(0x01);
-        expect(byteStream.read()).toBe(0x02);
-        expect(byteStream.read()).toBe(0x03);
+        expect(byteStream.read()[0]).toBe(0x01);
+        expect(byteStream.read()[0]).toBe(0x02);
+        expect(byteStream.read()[0]).toBe(0x03);
     });
     it('should increment the index correctly after each call', () => {
         const byteStream = new ByteStream([0x01, 0x02, 0x03]);
@@ -42,6 +42,20 @@ describe('ByteStream class', () => {
         expect(() => byteStream.read()).toThrow();
     });
     it('should handle correctly with an empty byte array', () => {
+        const byteStream = new ByteStream([]);
+        expect(() => byteStream.read()).toThrow();
+    });
+    it('should correctly read multiple bytes from the stream', () => {
+        const byteStream = new ByteStream([0x01, 0x02, 0x03, 0x04]);
+        const result = byteStream.read(3);
+        expect(result).toEqual([0x01, 0x02, 0x03]);
+    });
+    it('should throw an error when reading past the end of the stream', () => {
+        const byteStream = new ByteStream([0x01, 0x02]);
+        byteStream.read(2);
+        expect(() => byteStream.read(1)).toThrow();
+    });
+    it('should throw an error when reading from an empty byte array', () => {
         const byteStream = new ByteStream([]);
         expect(() => byteStream.read()).toThrow();
     });
