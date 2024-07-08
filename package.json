@@ -1,0 +1,15 @@
+{
+  "name": "@samsonium/twkb",
+  "version": "1.0.0",
+  "description": "TWKB parsing library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TWKB",
+    "parser"
+  ],
+  "author": "Samsonium",
+  "license": "MIT"
+}
