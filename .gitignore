@@ -6,6 +6,7 @@
 
 # Files
 !/.gitignore
+!/build.config.cjs
 !/package.json
 !/package-lock.json
 !/tsconfig.json
