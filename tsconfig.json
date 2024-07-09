@@ -2,8 +2,10 @@
   "compilerOptions": {
     "emitDeclarationOnly": true,
     "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
     "declaration": true,
     "declarationDir": "types",
     "composite": true,
