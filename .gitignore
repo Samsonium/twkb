@@ -6,8 +6,8 @@
 
 # Files
 !/.gitignore
-!/build.config.cjs
 !/package.json
 !/package-lock.json
 !/tsconfig.json
+!/tsup.config.js
 !/vitest.config.ts

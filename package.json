@@ -1,16 +1,26 @@
 {
   "name": "@samsonium/twkb-track",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "TWKB LineString track parsing library",
-  "main": "lib/index.js",
-  "types": "types/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
   "files": [
-    "lib/**/*",
-    "types/**/*"
+    "dist"
   ],
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "test": "vitest",
-    "build": "node build.config.cjs && tsc"
+    "build": "tsup"
   },
   "keywords": [
     "TWKB",
@@ -20,7 +30,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.14.10",
-    "esbuild": "^0.23.0",
+    "tsup": "^8.1.0",
     "typescript": "^5.5.3",
     "vitest": "^2.0.0"
   },
