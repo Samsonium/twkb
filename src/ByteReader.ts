@@ -1,4 +1,6 @@
-
+/**
+ * Byte reader class
+ */
 export default class ByteReader {
     private readonly buffer: ArrayBuffer;
     private readonly view: DataView;
