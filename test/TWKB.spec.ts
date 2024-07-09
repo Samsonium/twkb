@@ -1,5 +1,5 @@
 import {describe, it, expect, vi} from 'vitest';
-import {TWKB} from '../src/TWKB';
+import TWKB from '../src/TWKB';
 import ByteReader from '../src/ByteReader';
 
 const testTWKB =

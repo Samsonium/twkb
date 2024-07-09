@@ -5,7 +5,7 @@ import type {DeltaPoint, Point, HeadData} from '$src/types.ts';
 /**
  * TWKB track part parser
  */
-export class TWKB {
+export default class TWKB {
     private readonly reader: ByteReader;
 
     constructor(hex: string) {
