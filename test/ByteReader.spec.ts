@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import ByteReader from '../src/ByteReader.js';
+import ByteReader from '../src/ByteReader';
 
 describe('ByteReader', () => {
     it('should convert a valid hex string to an ArrayBuffer correctly', () => {

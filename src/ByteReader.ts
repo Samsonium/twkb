@@ -24,10 +24,20 @@ export default class ByteReader {
     }
 
     /**
+     * Decode zig-zag value (a little different with method above)
+     * @param value - value to decode
+     */
+    public zigZagDecode(value: number): number {
+        return (value >> 1) ^ -(value & 1);
+    }
+
+    /**
      * Read single byte from byte buffer
      * @returns byte data
      */
     public readByte(): number {
+        if (this.cursor >= this.view.byteLength)
+            throw 'Reached end of byte buffer';
         return this.view.getUint8(this.cursor++);
     }
 
@@ -41,7 +51,7 @@ export default class ByteReader {
         let byte: number;
 
         do {
-            byte = this.view.getUint8(this.cursor++);
+            byte = this.readByte();
             result |= (byte & 0x7F) << shift;
             shift += 7;
         } while (byte >= 0x80);
