@@ -1,7 +1,7 @@
-import ByteReader from '$src/ByteReader.ts';
-import Struct from '$src/Struct.ts';
-import TWKB from '$src/TWKB.ts';
-import type {DeltaPoint, Point, StructDef, HeadData} from '$src/types.ts';
+import ByteReader from './ByteReader.ts';
+import Struct from './Struct.ts';
+import TWKB from './TWKB.ts';
+import type {DeltaPoint, Point, StructDef, HeadData} from './types.ts';
 
 export {
     ByteReader,

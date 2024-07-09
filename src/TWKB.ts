@@ -1,6 +1,6 @@
-import ByteReader from '$src/ByteReader.ts';
-import Struct from '$src/Struct.ts';
-import type {DeltaPoint, Point, HeadData} from '$src/types.ts';
+import ByteReader from './ByteReader.ts';
+import Struct from './Struct.ts';
+import type {DeltaPoint, Point, HeadData} from './types.ts';
 
 /**
  * TWKB track part parser

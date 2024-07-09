@@ -1,5 +1,5 @@
-import type {StructDef} from '$src/types';
-import ByteReader from '$src/ByteReader';
+import type {StructDef} from './types';
+import ByteReader from './ByteReader';
 
 /**
  * `struct` implementation for parsing
