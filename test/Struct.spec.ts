@@ -1,7 +1,7 @@
 import {describe, it, expect} from 'vitest';
 import ByteReader from '../src/ByteReader';
 import Struct from '../src/Struct';
-import {StructDef} from '../src/types';
+import {StructDef} from '../src';
 
 describe('Struct class', () => {
     it('should correctly parse a simple structure with numeric fields', () => {
