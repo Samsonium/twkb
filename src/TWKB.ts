@@ -47,12 +47,12 @@ export default class TWKB {
 
             lx += dx;
             ly += dy;
-            lt += dt;
+            lt += Math.abs(dt);
 
             result.push({
                 latitude: ly / facXY,
                 longitude: lx / facXY,
-                time: -(lt / facM) * 4000
+                time: lt * facM + (60 * 60 * 24 * 14954) + (60 * 60 * 4) + (60 * 6) + 53
             });
         }
 
