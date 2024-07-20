@@ -80,7 +80,7 @@ describe('TWKB', () => {
         expect(reader.readVarInt()).toBe(270);
     });
     it('should correct parse Dates:', () => {
-        const twkb = new TWKB(exampleTrack)
+        const twkb = new TWKB(testDayTWKB)
         const line = twkb.parse()
 
         const first = new Date(line[0].time * 1000)
