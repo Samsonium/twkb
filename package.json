@@ -1,6 +1,6 @@
 {
   "name": "@samsonium/twkb-track",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "TWKB LineString track parsing library",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
