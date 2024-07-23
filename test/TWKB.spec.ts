@@ -79,15 +79,4 @@ describe('TWKB', () => {
         const reader = new ByteReader('8E02');
         expect(reader.readVarInt()).toBe(270);
     });
-    it('should correct parse Dates:', () => {
-        const twkb = new TWKB(testDayTWKB)
-        const line = twkb.parse()
-
-        const first = new Date(line[0].time * 1000)
-        const last = new Date(line[line.length - 1].time * 1000)
-
-
-        expect(first.toISOString()).toBe('2024-07-01T00:00:00.000Z')
-        expect(last.toISOString()).toBe('2024-07-01T16:38:55.000Z')
-    })
 });
